@@ -1,6 +1,7 @@
-package KontaktOOP;
+
 
 public class Kontakt {
+	// Attributes
 	private String name;
 	private String tel;
 	private String eMail;
