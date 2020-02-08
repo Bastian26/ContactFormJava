@@ -3,7 +3,7 @@
 //Prohejtkname: Kontaktformular OOP
 //Datum: 28.01.2019
 //-----------------------------------
-package KontaktOOP;
+
 
 import java.util.*;
 import java.util.Scanner;
@@ -23,10 +23,10 @@ public class Main {
 	public static void menue() {
 		boolean breakCondition = true;
 		do {
-			System.out.println("-) Möchten Sie Kontakte hinzufügen, dann drücken Sie bitte (k)\n"
+			System.out.println("-) MÃ¶chten Sie Kontakte hinzufÃ¼gen, dann drÃ¼cken Sie bitte (k)\n"
 					          + "-) zum Entfernen von Kontakten die Taste (e) \n"
 					          + "-) und zum Anzeigen aller Kontakte (a)\n"
-					          + "-) zum Ändern der Informationen bestehender Kontakte (x)\n"
+					          + "-) zum Ã„ndern der Informationen bestehender Kontakte (x)\n"
 					          + "-) zum Beenden des Programms (c)");
 			
 			//-------------------------------------------------------------------------------
@@ -39,22 +39,22 @@ public class Main {
 					// Add new Contacts
 					case 'k':
 							 Kontakt k =arrayInput(); // Kontakt wird erstellt und per Konstruktor direkt mit Werten initialisiert
-							 contactInformationArrayList.add(k); // Add teh vreated contact to the ArrayList 
+							 contactInformationArrayList.add(k); // Add new created contact to the ArrayList 
 							 break;
 					// Delete of Contacts
 					case 'e':
 							// Input Index-Number to remove the Contact with that INDEX
-							 System.out.println("Geben Sie bitte die Index-Nummer des zu löschenden Kontakts an");
+							 System.out.println("Geben Sie bitte die Index-Nummer des zu lÃ¶schenden Kontakts an");
 						 	 int indexToDelete;
 							 while (true) {
 						 		 indexToDelete = scan.nextInt();
 						 		 if (indexToDelete < contactInformationArrayList.size() && indexToDelete >=  0) {
-						 			 System.out.println("Ihr Kontakt " + contactInformationArrayList.get(indexToDelete) + "wird gelöscht!");
+						 			 System.out.println("Ihr Kontakt " + contactInformationArrayList.get(indexToDelete) + "wird gelÃ¶scht!");
 						 			 contactInformationArrayList.remove(indexToDelete);
 						 			 break;
 							 	}
 							    else {
-							    	System.out.println("Ihr Index existiert nicht, geben Sie einen gültigen ein");
+							    	System.out.println("Ihr Index existiert nicht, geben Sie einen gÃ¼ltigen ein");
 							    }
 							 }
 							 
@@ -114,7 +114,7 @@ public class Main {
 			telNr = scan.next();
 			boolean trueOrFalse = isNumeric(telNr);
 			if ( trueOrFalse == true) {
-				System.out.println("Nummer bestätigt");
+				System.out.println("Nummer bestÃ¤tigt");
 				breakCon = false;
 			} else {
 				System.out.println("Bitte geben Sie nur Zahlen ein");
@@ -123,7 +123,7 @@ public class Main {
 		} while (breakCon);
 		
 		// Number have to be 11 chars (for a good formated console-output)
-		//TODO nummern müssen 11 zeichen lang sein
+		//TODO nummern mÃ¼ssen 11 zeichen lang sein
 		if (telNr.length() < 11) {
 	 		int numberToBeExpanded = 11 - telNr.length();
 	 		String space = "";
@@ -141,13 +141,13 @@ public class Main {
 	}
 	// Auskunft PRINT METHOD for Start-Information
 	public static void auskunft(){
-		System.out.println("-) Möchten Sie Kontakte hinzufügen, dann drücken Sie bitte \"k\",\n"
+		System.out.println("-) MÃ¶chten Sie Kontakte hinzufÃ¼gen, dann drÃ¼cken Sie bitte \"k\",\n"
 		          + "-) zum Entfernen von Kontakten die Taste \"e\" \n"
 		          + "-) und zum Anzeigen aller Kontakte \"a\"");
 	}
 	// METHOD to change the informations from the contacts
 	public static void changeInformationsInContact() {
-		System.out.println("Bitte geben Sie den Index des zu ändernden Kontakts ein");
+		System.out.println("Bitte geben Sie den Index des zu Ã¤ndernden Kontakts ein");
 		int indextoChangeArrayContact;
 		while (true) {
 			// Catch Errors: Only Number Input
@@ -156,7 +156,7 @@ public class Main {
 				break;
 			}
 			catch (NumberFormatException e) {
-				System.out.println("Sie dürfen nur Zahlen eingeben!"
+				System.out.println("Sie dÃ¼rfen nur Zahlen eingeben!"
 						+ "\nGeben Sie den Namen ein");
 			}
 		}
@@ -164,10 +164,10 @@ public class Main {
 		boolean breakCondition = true;
 		while (breakCondition){
 			//contactInformationArrayList.get(indextoChangeArrayContact);
-			System.out.println("Was an dem Kontakt möchten sie ändern?"
-					+ "\nWollen Sie den Namen ändern, die Taste (1) drücken"
-					+ "\nWollen Sie die Telefonnummer ändern, die Taste (2) drücken"
-					+ "\nWollen Sie die E-Mail ändern, die Taste (3) drücken");
+			System.out.println("Was an dem Kontakt mÃ¶chten sie Ã¤ndern?"
+					+ "\nWollen Sie den Namen Ã¤ndern, die Taste (1) drÃ¼cken"
+					+ "\nWollen Sie die Telefonnummer Ã¤ndern, die Taste (2) drÃ¼cken"
+					+ "\nWollen Sie die E-Mail Ã¤ndern, die Taste (3) drÃ¼cken");
 			
 			int numberDecision = scan.nextInt();
 			switch (numberDecision) {
@@ -195,7 +195,7 @@ public class Main {
 						newNumber = scan.next();
 						boolean trueOrFalse = isNumeric(newNumber);
 						if ( trueOrFalse == true) {
-							System.out.println("Nummer bestätigt");
+							System.out.println("Nummer bestÃ¤tigt");
 							contactInformationArrayList.get(indextoChangeArrayContact).setTel(newNumber);
 							breakCon = false;
 						} else {
@@ -205,7 +205,7 @@ public class Main {
 						
 					} while (breakCon);
 					// Number have to be 11 chars (for a good formated console-output)
-					//TODO nummern müssen 11 zeichen lang sein
+					//TODO nummern mÃ¼ssen 11 zeichen lang sein
 					if (newNumber.length() < 11) {
 				 		int numberToBeExpanded = 11 - newNumber.length();
 				 		String space = "";
@@ -224,8 +224,8 @@ public class Main {
 			};
 
 			// continue (F-key) or back to the main menu (H-Key)
-			System.out.println("Wollen Sie noch weiter Daten eingeben, oder zurück zum Hauptmenü"
-					+ "\nKontaktänderung fortsetzen (F) oder Hauptmenü (H) ");
+			System.out.println("Wollen Sie noch weiter Daten eingeben, oder zurÃ¼ck zum HauptmenÃ¼"
+					+ "\nKontaktÃ¤nderung fortsetzen (F) oder HauptmenÃ¼ (H) ");
 			String auswahlMiniMenue = scan.next().toLowerCase();
 			char auswahlChar = auswahlMiniMenue.charAt(0);
 			if (auswahlChar == 'f') {
@@ -234,7 +234,7 @@ public class Main {
 			else if (auswahlChar == 'h') {
 				menue();
 				breakCondition = false;
-				// TODO Hauptmenü-Rückkehr funktioniert nicht
+				// TODO HauptmenÃ¼-RÃ¼ckkehr funktioniert nicht
 			}
 		}
 	}
