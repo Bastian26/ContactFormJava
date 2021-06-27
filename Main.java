@@ -1,6 +1,6 @@
 //-----------------------------------
 //Name: Bastian Struggl
-//Projetkname: Kontaktformular OOP
+//Projektname: Kontaktformular OOP
 //Datum: 28.01.2019
 //-----------------------------------
 
